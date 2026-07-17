@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === "production") {
 
 // connect DB → 成功したら起動
 connectDB().then(() => {
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0", () => {
     //app.listen アプリを 指定したポート番号で起動させる命令
     console.log("Server started on PORT:", PORT);
   });
